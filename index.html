@@ -1,0 +1,252 @@
+<html><head><base href="https://your-domain.com">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>時尚服飾精品店 | Fashion Boutique</title>
+<style>
+:root {
+  --primary: #2c3e50;
+  --secondary: #e74c3c;
+  --light: #ecf0f1;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: '微軟正黑體', 'Microsoft JhengHei', sans-serif;
+  line-height: 1.6;
+}
+
+.header {
+  background: var(--primary);
+  padding: 1rem;
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.logo {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: var(--secondary);
+}
+
+.hero {
+  height: 100vh;
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+              url('https://images.unsplash.com/photo-1441984904996-e0b6ba687e04') center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+
+.hero-content h1 {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.cta-btn {
+  display: inline-block;
+  padding: 1rem 2rem;
+  background: var(--secondary);
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+.cta-btn:hover {
+  background: #c0392b;
+}
+
+.products {
+  max-width: 1200px;
+  margin: 4rem auto;
+  padding: 0 1rem;
+}
+
+.products h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.product-card {
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+}
+
+.product-image {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.product-info {
+  padding: 1rem;
+}
+
+.product-info h3 {
+  margin-bottom: 0.5rem;
+}
+
+.price {
+  color: var(--secondary);
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.fadeIn {
+  animation: fadeIn 1s ease-out;
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+  
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+}
+</style>
+</head>
+<body>
+
+<header class="header">
+  <nav class="nav">
+    <div class="logo">Fashion Boutique</div>
+    <div class="nav-links">
+      <a href="/women">女裝</a>
+      <a href="/men">男裝</a>
+      <a href="/new">新品上市</a>
+      <a href="/sale">特價商品</a>
+      <a href="/about">關於我們</a>
+    </div>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="hero-content fadeIn">
+    <h1>展現獨特風格</h1>
+    <p>精選時尚服飾，打造專屬於你的個人魅力</p>
+    <a href="/new" class="cta-btn">探索新品</a>
+  </div>
+</section>
+
+<section class="products">
+  <h2>熱門商品</h2>
+  <div class="product-grid">
+    <div class="product-card fadeIn">
+      <img src="https://images.unsplash.com/photo-1434389677669-e08b4cac3105" 
+           alt="時尚女性連身裙，淺色系" 
+           class="product-image"
+           width="300"
+           height="400">
+      <div class="product-info">
+        <h3>優雅連身裙</h3>
+        <p>完美剪裁，展現優雅氣質</p>
+        <div class="price">NT$ 2,980</div>
+      </div>
+    </div>
+    
+    <div class="product-card fadeIn">
+      <img src="https://images.unsplash.com/photo-1576566588028-4147f3842f27" 
+           alt="經典男士西裝外套，深藍色" 
+           class="product-image"
+           width="300"
+           height="400">
+      <div class="product-info">
+        <h3>經典西裝外套</h3>
+        <p>商務必備，品味之選</p>
+        <div class="price">NT$ 4,580</div>
+      </div>
+    </div>
+    
+    <div class="product-card fadeIn">
+      <img src="https://images.unsplash.com/photo-1485230895905-ec40ba36b9bc" 
+           alt="休閒牛仔褲，淺藍水洗" 
+           class="product-image"
+           width="300"
+           height="400">
+      <div class="product-info">
+        <h3>時尚牛仔褲</h3>
+        <p>舒適百搭，日常必備</p>
+        <div class="price">NT$ 1,880</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // 監聽滾動事件，實現淡入效果
+  const fadeElements = document.querySelectorAll('.fadeIn');
+  
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.style.opacity = 1;
+        entry.target.style.transform = 'translateY(0)';
+      }
+    });
+  });
+  
+  fadeElements.forEach(element => {
+    observer.observe(element);
+  });
+});
+</script>
+
+</body>
+</html>
